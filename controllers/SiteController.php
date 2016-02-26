@@ -91,16 +91,4 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
-    
-    public function actionLoadsert()
-    {
-        $name = 'Sert';
-        return $this->render('load', ['name' => $name]);
-    }
-    
-    public function actionLoadinstr()
-    {
-        $name = 'Instr';
-        return $this->render('load', ['name' => $name]);
-    }
 }

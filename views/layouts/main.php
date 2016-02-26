@@ -38,8 +38,8 @@ AppAsset::register($this);
         'items' => [
             ['label' => 'Home', 'url' => ['/site/index']],
             ['label' => 'Load', 'items' => [
-                ['label' => 'Instr', 'url' => ['/site/loadinstr']],
-                ['label' => 'sert', 'url' => ['/site/loadsert']],
+                ['label' => 'Instructions', 'url' => ['/load/instructions']],
+                ['label' => 'Sertificats', 'url' => ['/load/sertificats']],
             ]],
             ['label' => 'About', 'url' => ['/site/about']],
             ['label' => 'Contact', 'url' => ['/site/contact']],
