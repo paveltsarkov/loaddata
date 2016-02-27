@@ -48,8 +48,13 @@ $config = [
                 'contact' => 'site/contact',
             ],
         ],
-        
+           
     ],
+    'modules' => [
+            'zakupi' => [
+                'class' => 'app\modules\zakupi\Module',
+            ],
+        ],
     'params' => $params,
 ];
 
