@@ -1,11 +1,10 @@
 <?php
-namespace app\models;
+namespace app\modules\import\models;
 
 use Yii;
 use yii\base\Model;
-use yii\web\UploadedFile;
 
-class UploadSertForm extends Model 
+class UploadForm extends Model 
 {
     public $file;
     

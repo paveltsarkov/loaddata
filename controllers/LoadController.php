@@ -28,7 +28,7 @@ class LoadController extends Controller
 
     public function actionSertificats()
     {
-        $model = UploadSertForm();
+        $model = new UploadSertForm();
         
         /*
         $showErrors = [];
@@ -102,7 +102,7 @@ class LoadController extends Controller
                     $showErrors = $priceFile->errors;
                     $errorsFileName = $priceFile->exportErrorsFileUrl;
                      * ***********************************************************/
-                }
+                /*}
                 
 //                return $this->redirect('/price');                
             } else {

@@ -54,6 +54,9 @@ $config = [
             'zakupi' => [
                 'class' => 'app\modules\zakupi\Module',
             ],
+            'import' => [
+                'class' => 'app\modules\import\Module',
+            ],
         ],
     'params' => $params,
 ];
