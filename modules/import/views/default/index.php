@@ -1,4 +1,9 @@
-<?php use yii\helpers\Html; ?>
+<?php use yii\helpers\Html; 
+use yii\widgets\ActiveForm;
+
+$this->title = 'Загрузка';
+$this->params['breadcrumbs'][] = $this->title;
+?>
 <div class="import-default-index">
     <h1><?= $this->context->action->uniqueId ?></h1>
     <p>
@@ -10,13 +15,18 @@
         You may customize this page by editing the following file:<br>
         <code><?= __FILE__ ?></code>
     </p>
-    <?= Html::beginForm([''], 'post', ['class' => 'form-inline'])?>
-    <?= Html::hiddenInput('type', $name)?>
-    <div class="form-group">
-        <?= Html::fileInput('legend')?>
-    </div>
-    <div class="form-group">
-        <?= Html::submitButton('Отправить',['class' => 'btn btn-primary'])?>
-    </div>
-    <?= Html::endForm()?>
+    
+    <div class="import-default-index">
+        <?php $form = ActiveForm::begin([
+            'options' => ['enctype' => 'multipart/form-data', 'class' => 'form-inline',], 
+            'action' => ['more'], 
+            ]); ?>
+
+        <?= $form->field($model, 'legendFile')->fileInput() ?>
+    
+        <div class="form-group">
+            <?= Html::submitButton('Submit', ['class' => 'btn btn-primary']) ?>
+        </div>
+        <?php ActiveForm::end(); ?>
+    </div><!-- import-default-index -->
 </div>

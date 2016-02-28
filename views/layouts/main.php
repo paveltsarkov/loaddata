@@ -37,9 +37,9 @@ AppAsset::register($this);
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
             ['label' => 'Home', 'url' => ['/site/index']],
-            ['label' => 'Load', 'items' => [
-                ['label' => 'Instructions', 'url' => ['/load/instructions']],
-                ['label' => 'Sertificats', 'url' => ['/load/sertificats']],
+            ['label' => 'Загрузить', 'items' => [
+                ['label' => 'Instructions', 'url' => ['/import/instructions']],
+                ['label' => 'Sertificats', 'url' => ['/import/sertificats']],
             ]],
             ['label' => 'About', 'url' => ['/site/about']],
             ['label' => 'Contact', 'url' => ['/site/contact']],

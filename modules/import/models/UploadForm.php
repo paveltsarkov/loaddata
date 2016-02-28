@@ -3,15 +3,16 @@ namespace app\modules\import\models;
 
 use Yii;
 use yii\base\Model;
+use yii\web\UploadedFile;
 
 class UploadForm extends Model 
 {
-    public $file;
+    public $legendFile;
     
     public function rules() {
         return [
-            [['file'], 'required'],
-            [['file'], 'file',],
+            [['legendFile'], 'required'],
+            [['legendFile'], 'file','extensions' => ['csv']],
         ];
     }
 
