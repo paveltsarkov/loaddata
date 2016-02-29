@@ -12,7 +12,7 @@ class UploadForm extends Model
     public function rules() {
         return [
             [['legendFile'], 'required'],
-            [['legendFile'], 'file','extensions' => ['csv']],
+            [['legendFile'], 'file', 'checkExtensionByMimeType' => false, 'extensions' => 'csv'],
         ];
     }
 
