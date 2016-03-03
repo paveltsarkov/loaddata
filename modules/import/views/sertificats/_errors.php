@@ -11,8 +11,14 @@ foreach ($errors as $key => $value) {
     echo DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'text',
-            'sert',
+            [
+                'attribute' => 'text',
+                'label' => 'Ошибка',
+            ],
+            [
+                'attribute' => 'sert',
+                'label' => 'Данные',
+            ],
         ],
         
     ]);
