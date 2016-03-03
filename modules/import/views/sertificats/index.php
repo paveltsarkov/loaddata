@@ -17,7 +17,6 @@ $this->params['breadcrumbs'][] = $this->title;
     </p>
     
     <div class="import-default-index">
-        <?php if(!empty($errors)) echo '<div class="errors">' . Html::encode($errors) . '</div>'; ?>
         <?php $form = ActiveForm::begin([
             'options' => ['enctype' => 'multipart/form-data', 'class' => 'form-inline',], 
 //            'action' => ['more'], 
@@ -29,5 +28,12 @@ $this->params['breadcrumbs'][] = $this->title;
             <?= Html::submitButton('Submit', ['class' => 'btn btn-primary']) ?>
         </div>
         <?php ActiveForm::end(); ?>
+        <?php if ($message) { ?>
+        <p class="bg-success"><?=$message; ?></p>
+        <?php } ?>
+        
+        <?= $errors ? $this->render('_errors', ['errors' => $errors]) : '';
+        ?>
+        
     </div><!-- import-default-index -->
 </div>

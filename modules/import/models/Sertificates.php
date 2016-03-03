@@ -19,21 +19,18 @@ use Yii;
  * @property string $data_stop
  * @property string $file_name
  */
-class Sertificates extends \yii\db\ActiveRecord
-{
+class Sertificates extends \yii\db\ActiveRecord {
     /**
      * @inheritdoc
      */
-    public static function tableName()
-    {
+    public static function tableName() {
         return 'sertificates';
     }
 
     /**
      * @inheritdoc
      */
-    public function rules()
-    {
+    public function rules() {
         return [
             [['products_id', 'brand_id', 'recid', 'itemid'], 'integer'],
             [['article', 'type', 'num_sert', 'data_start', 'data_stop'], 'string'],
@@ -44,8 +41,7 @@ class Sertificates extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
-    public function attributeLabels()
-    {
+    public function attributeLabels() {
         return [
             'id' => 'ID',
             'products_id' => 'Products ID',
