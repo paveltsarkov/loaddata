@@ -38,8 +38,8 @@ AppAsset::register($this);
         'items' => [
             ['label' => 'Home', 'url' => ['/site/index']],
             ['label' => 'Загрузить', 'items' => [
-                ['label' => 'Instructions', 'url' => ['/import/instructions']],
-                ['label' => 'Sertificats', 'url' => ['/import/sertificats']],
+                ['label' => 'Сертификаты', 'url' => ['/import/sertificats']],
+                ['label' => 'Инструкции', 'url' => ['/import/instructions']],
             ]],
             ['label' => 'About', 'url' => ['/site/about']],
             ['label' => 'Contact', 'url' => ['/site/contact']],

@@ -32,7 +32,6 @@ class SertificatsController extends \yii\web\Controller {
             
             if ($model->legendFile && $model->validate()) {
                 $model->legendFile->saveAs(\Yii::getAlias('@app').'/uploads/'. str_replace(' ', '_', trim($model->legendFile->baseName)) . '.' . strtolower($model->legendFile->extension));
-                // form inputs are valid, do something here
                 $sert = new Sertificats();
                 $sert->import($model->legendFile);
                 $message = 'Данные успешно обработаны!';

@@ -37,9 +37,9 @@ $this->params['breadcrumbs'][] = $this->title;
         </tr>
         <tr>
             <td class="bg-primary">Бренд (обязательно)</td>
-            <td class="bg-info">Тип (желательно)</td>
+            <td class="bg-primary">Тип (обязательно)</td>
             <td class="bg-primary">Артикул (обязательно)</td>
-            <td class="bg-info">Номер сертификата (желательно)</td>
+            <td class="bg-primary">Номер сертификата (обязательно)</td>
             <td class="bg-info">Дата  выдачи (желательно)</td>
             <td class="bg-info">Дата окончания (желательно)</td>
             <td class="bg-primary">Папка/Имя файла (обязательно)</td>
