@@ -6,34 +6,53 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="import-default-index">
     <h1><?= $this->title ?></h1>
-    <p>
-        This is the view content for action "<?= $this->context->action->id ?>".
-        The action belongs to the controller "<?= get_class($this->context) ?>"
-        in the "<?= $this->context->module->id ?>" module.
-    </p>
-    <p>
-        You may customize this page by editing the following file:<br>
-        <code><?= __FILE__ ?></code>
-    </p>
-    
-    <div class="import-default-index">
-        <?php $form = ActiveForm::begin([
-            'options' => ['enctype' => 'multipart/form-data', 'class' => 'form-inline',], 
-//            'action' => ['more'], 
-            ]); ?>
 
-        <?= $form->field($model, 'legendFile')->fileInput()->label('Выберите csv файл') ?>
+    <?php 
+    /*Форма загрузки файла*/
+    $form = ActiveForm::begin([
+        'options' => ['enctype' => 'multipart/form-data', 'class' => 'form-inline',], 
+    ]);
+    ?>
+
+    <?= $form->field($model, 'legendFile')->fileInput()->label('Выберите csv файл') ?>
+
+    <div class="form-group">
+        <?= Html::submitButton('Submit', ['class' => 'btn btn-primary']) ?>
+    </div>
+    <?php ActiveForm::end(); 
+    /*Конец формы*/
+    ?>
     
-        <div class="form-group">
-            <?= Html::submitButton('Submit', ['class' => 'btn btn-primary']) ?>
-        </div>
-        <?php ActiveForm::end(); ?>
-        <?php if ($message) { ?>
-        <p class="bg-success"><?=$message; ?></p>
-        <?php } ?>
+    <hr>
+    <div class="h4">Структура файла</div>
+    <table class="table table-striped table-condensed">
+        <tr>
+            <th>Бренд</th>
+            <th>Тип</th>
+            <th>Артикул</th>
+            <th>Номер сертификата</th>
+            <th>Дата  выдачи</th>
+            <th>Дата окончания</th>
+            <th>Папка/Имя файла</th>
+        </tr>
+        <tr>
+            <td class="bg-primary">Бренд (обязательно)</td>
+            <td class="bg-info">Тип (желательно)</td>
+            <td class="bg-primary">Артикул (обязательно)</td>
+            <td class="bg-info">Номер сертификата (желательно)</td>
+            <td class="bg-info">Дата  выдачи (желательно)</td>
+            <td class="bg-info">Дата окончания (желательно)</td>
+            <td class="bg-primary">Папка/Имя файла (обязательно)</td>
+        </tr>
+    </table>
+    
+    <?php if ($message) { ?>
+    <div class="bs-callout bs-callout-info">
+        <h4><?=$message; ?></h4>
+    </div>
+    <?php } ?>
+
+    <?= $errors ? $this->render('_errors', ['errors' => $errors]) : '';
+    ?>
         
-        <?= $errors ? $this->render('_errors', ['errors' => $errors]) : '';
-        ?>
-        
-    </div><!-- import-default-index -->
-</div>
+</div><!-- import-default-index -->

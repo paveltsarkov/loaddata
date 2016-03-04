@@ -1,6 +1,10 @@
 <?php
 use yii\widgets\DetailView;
+?>
+<div class="bs-callout bs-callout-danger">
+    <h4>В процессе работы возникли следующие ошибки:</h3>
 
+<?php
 $attr = '';
 foreach ($errors as $key => $value) {
     foreach ($value['sert'] as $key => $sert) {
@@ -12,23 +16,12 @@ foreach ($errors as $key => $value) {
         'model' => $model,
         'attributes' => [
             [
-                'attribute' => 'text',
-                'label' => 'Ошибка',
-            ],
-            [
                 'attribute' => 'sert',
-                'label' => 'Данные',
+                'label' => $model['text'],
             ],
         ],
         
     ]);
 }
-//echo DetailView::widget([
-//    'model' => $errors,
-//    'attributes' => [
-//        'text',
-//        'sert',
-//    ],
-//        
-//    ]);
 ?>
+</div>
