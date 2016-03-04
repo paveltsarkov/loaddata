@@ -3,6 +3,7 @@
 namespace app\modules\import\models;
 
 use app\models\Brands;
+use app\modules\zakupi\models\Sertificates;
 
 /**
  * Класс обработки csv файла с данными о загружиемых сертификатах. 
@@ -91,7 +92,7 @@ class Sertificats {
         }
         $temp = explode(".", $file);
         $fileName = md5_file($tempFileName).".".end($temp);
-        $filePath = '/sertificates_'.$this->brandName.'/'.$fileName;
+        $filePath = 'sertificates_'.$this->brandName.'/'.$fileName;
         $pathFolderComplite = \Yii::getAlias('@app').$this->folderComplite.'sertificates_'.$this->brandName.'/';
 
         try {
