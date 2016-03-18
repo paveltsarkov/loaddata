@@ -28,8 +28,8 @@ class ProcessingInstructions {
             $this->instr = new Instructions();
             
             $this->instr->article = $data[1];
-            $this->instr->name = $data[2];
-            $this->instr->file = $data[3];
+            $this->instr->file = $data[2];
+            $this->instr->name = $data[3];
             
             // Достаем id бренда из базы. В случае неудачи, возвращаем ошибку и переходим к следующей записи
             if (!$brands = Brands::findByNameAndSimilar($this->brandName)) {
