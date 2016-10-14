@@ -58,6 +58,9 @@ $config = [
             'import' => [
                 'class' => 'app\modules\import\Module',
             ],
+            'rename' => [
+                'class' => 'app\modules\rename\Module',
+            ],
         ],
     'params' => $params,
 ];

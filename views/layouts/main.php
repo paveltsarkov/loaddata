@@ -41,6 +41,7 @@ AppAsset::register($this);
                 ['label' => 'Сертификаты', 'url' => ['/import/sertificats']],
                 ['label' => 'Инструкции', 'url' => ['/import/instructions']],
             ]],
+            ['label' => 'Переименование', 'url' => ['/rename']],
             ['label' => 'About', 'url' => ['/site/about']],
             ['label' => 'Contact', 'url' => ['/site/contact']],
             Yii::$app->user->isGuest ? (
